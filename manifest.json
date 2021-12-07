@@ -1,0 +1,67 @@
+{
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "offline_enabled": true,
+  "version": "2.7.6",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+ 
+  "browser_action": {
+    "default_icon": "assets/extension-icons/mirror-logo.png",
+      "default_popup": "html/popup.html"
+  },
+  "icons": {
+    "16": "assets/extension-icons/mirror-logo.png",
+    "128": "assets/extension-icons/mirror-logo.png",
+    "48": "assets/extension-icons/mirror-logo.png"
+  },
+  "content_scripts": [
+      {
+          "matches": [
+          "<all_urls>"
+          ],
+          "js": ["js/detect.js"]
+      }
+  ],
+  "permissions": [
+    "<all_urls>","activeTab", "tabCapture", "tabs", "downloads", "storage", "identity", "https://www.googleapis.com/*"
+  ],
+  "web_accessible_resources": [        
+    "html/camera.html","html/sources.html","html/settings.html","js/content.js","js/libraries/ffmpeg.js", "css/content.css","assets/images/*","js/sources.js", "js/cameracontent.js", "css/cameracontent.css", "js/libraries/plyr.min.js", "css/libraries/plyr.min.css", "js/audiosources.js", "html/audiosources.html"
+  ],
+  "commands": {
+      "cancel": {
+          "suggested_key": {
+            "default": "Alt+C",
+            "mac": "Alt+C"
+          },
+          "description": "__MSG_extCancel__"
+      },
+      "mute/unmute": {
+          "suggested_key": {
+            "default": "Alt+M",
+            "mac": "Alt+M"
+          },
+          "description": "__MSG_extMute__"
+      },
+      "stop": {
+          "suggested_key": {
+            "default": "Alt+S",
+            "mac": "Alt+S"
+          },
+          "description": "__MSG_extStop__"
+      },
+      "pause/resume": {
+          "suggested_key": {
+            "default": "Alt+P",
+            "mac": "Alt+P"
+          },
+          "description": "__MSG_extPause__"
+      }
+   }
+}
+

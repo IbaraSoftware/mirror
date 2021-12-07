@@ -1,5 +1,8 @@
 # mirror
-Record your screen or desktop on Chrome. No servers, no creepiness - everything stays local to your machine until you decide to share it.Record your screen or desktop on Chrome. No servers, no creepiness - everything stays local to your machine until you decide to share it.
+
+**mirror** allows you to record your screen or desktop on Chrome and Chromium-based browsers. No servers, no creepiness - everything stays local to your machine until you decide to share it.
+
+*Firefox version coming soon.*
 
 ## What does Mirror do?
 
